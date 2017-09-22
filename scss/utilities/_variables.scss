@@ -17,6 +17,7 @@ $color-selection: lighten($mustard, 30%);
 
 $color-header: $white;
 $color-nav-item: $black;
+$color-nav-item-hover: $mustard;
 
 
 // FONTS
@@ -26,7 +27,7 @@ $font-stack-primary: 'Montserrat', sans-serif;
 $font-stack-secondary: 'Lato', sans-serif;
 
 // Font Weights
-$font-weight-light: 300;
+$font-weight-thin: 100;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
@@ -41,7 +42,10 @@ $line-height-body-text: 2rem;
 
 // BORDERS
 
-$border-size: 1.5px;
+$border-size: 1.25px;
+
+$border-black: 1.25px solid $black;
+$border-mustard: 1.25px solid $mustard;
 
 
 // MARGINS AND PADDING

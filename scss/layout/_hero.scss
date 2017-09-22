@@ -2,8 +2,46 @@
 // HERO
 // ==========================================
 
-.hero {
+.hero-section {
   @include bg-image($bg-image: "hero-image");
   height: calc(100vh - 87.5px); // Full view height minus height of header
   width: 100%;
+}
+
+.hero-section .headline-container {
+  margin-left: 10%;
+  width: 40%;
+}
+
+.triangle {
+  background: $white;
+  bottom: 0;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  height: 200px;
+  position: absolute;
+  right: 0;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  width: 200px;
+}
+
+.hero-section .arrows-container:hover .arrow--top {
+  bottom: 37px;
+}
+
+.hero-section .arrows-container:hover .arrow--bottom {
+  bottom: 15.5px;
+}
+
+.hero-section .arrow {
+  @include m(top) {
+    @extend .arrow;
+    bottom: 35px;
+    right: 17.5px;
+  }
+
+  @include m(bottom) {
+    @extend .arrow;
+    bottom: 17.5px;
+    right: 17.5px;
+  }
 }

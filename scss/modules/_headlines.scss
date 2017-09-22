@@ -1,0 +1,32 @@
+// ==========================================
+// HEADLINES
+// ==========================================
+
+.headline-container {
+  @include vertical-align();
+  height: auto;
+}
+
+.headline-container__border {
+  position: absolute;
+  width: 20%;
+
+  @include m(top) {
+    @extend .headline-container__border;
+    border-top: $border-mustard;
+    left: 0;
+    top: 0;
+  }
+
+  @include m(bottom) {
+    @extend .headline-container__border;
+    border-bottom: $border-mustard;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.headline {
+  text-align: center;
+  padding: 40px 0;
+}
