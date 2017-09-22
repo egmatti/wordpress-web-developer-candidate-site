@@ -22,7 +22,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   color: $color-headline;
-  font-weight: $font-weight-thin;
+  font-weight: $font-weight-light;
   margin: 0;
   text-transform: uppercase;
 }
@@ -32,19 +32,19 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 
@@ -52,5 +52,6 @@ h5 {
 
 p {
   color: $color-body-text;
+  font-weight: $font-weight-regular;
   line-height: $line-height-body-text;
 }

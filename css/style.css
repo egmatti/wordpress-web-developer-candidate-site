@@ -404,7 +404,7 @@ template {
   display: none; }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0; }
@@ -414,9 +414,9 @@ template {
 a {
   outline: none; }
 
-h1, h2, h3, h4, .nav__item, .nav__item--first, .nav__item--last, h5, h6 {
+h1, h2, h3, h4, h5, .nav__item, .nav__item--first, .nav__item--last, h6 {
   color: #fff;
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
   text-transform: uppercase; }
 
@@ -424,19 +424,20 @@ h1 {
   font-size: 3rem; }
 
 h2 {
-  font-size: 1.75rem; }
+  font-size: 2.5rem; }
 
 h3 {
+  font-size: 2rem; }
+
+h4 {
   font-size: 1.5rem; }
 
-h4, .nav__item, .nav__item--first, .nav__item--last {
+h5, .nav__item, .nav__item--first, .nav__item--last {
   font-size: 1.25rem; }
-
-h5 {
-  font-size: 1rem; }
 
 p {
   color: #0b0b0b;
+  font-weight: 400;
   line-height: 2rem; }
 
 /* Slider */
@@ -723,6 +724,7 @@ p {
   height: auto;
   width: auto; }
   .nav__item, .nav__item--first, .nav__item--last {
+    font-family: "Montserrat", sans-serif;
     color: #0b0b0b;
     display: inline-block;
     list-style-type: none;
@@ -812,5 +814,61 @@ header {
 .hero-section .arrow--bottom {
   bottom: 17.5px;
   right: 17.5px; }
+
+#home-page .floor-plans-section {
+  background: #fff;
+  height: auto;
+  margin: 100px 0;
+  width: 100%; }
+  #home-page .floor-plans-section__description {
+    margin: 0 20%;
+    text-align: center;
+    width: 60%; }
+    #home-page .floor-plans-section__description h2 {
+      color: #0b0b0b;
+      margin-bottom: 20px; }
+
+#home-page .floor-plans-slider-for--desktop {
+  display: block; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #home-page .floor-plans-slider-for--desktop {
+      display: none; } }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    #home-page .floor-plans-slider-for--desktop {
+      display: none; } }
+
+#home-page .floor-plans-slider-for--tablet {
+  display: none; }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    #home-page .floor-plans-slider-for--tablet {
+      display: block; } }
+
+#home-page .floor-plans-slider-for--mobile {
+  display: none; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #home-page .floor-plans-slider-for--mobile {
+      display: block; } }
+
+#home-page .floor-plans-section .slick-prev:before, .slick-next:before {
+  color: #e9a92f; }
+
+#home-page .floor-plans-div {
+  height: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 75px; }
+  @media (min-width: 0px) and (max-width: 767px) {
+    #home-page .floor-plans-div {
+      padding: 50px 10%;
+      width: 80%; } }
+
+#home-page .floor-plans-slider-for__post {
+  align-items: baseline;
+  display: flex;
+  justify-content: center; }
+
+#home-page .floor-plans-slider-for__post img {
+  height: 275px;
+  object-fit: contain; }
 
 /*# sourceMappingURL=style.css.map */

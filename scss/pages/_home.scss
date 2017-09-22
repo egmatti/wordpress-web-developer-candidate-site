@@ -1,3 +1,74 @@
 // ==========================================
 // HOME PAGE
 // ==========================================
+
+#home-page .floor-plans-section {
+  background: $color-body;
+  height: auto;
+  margin: 100px 0;
+  width: 100%;
+
+  @include e(description) {
+    margin: 0 20%;
+    text-align: center;
+    width: 60%;
+
+    h2 {
+      color: $black;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+#home-page .floor-plans-slider-for--desktop {
+  display: block;
+
+  @include media-query(small) {
+    display: none;
+  }
+
+  @include media-query(medium) {
+    display: none;
+  }
+}
+
+#home-page .floor-plans-slider-for--tablet {
+  display: none;
+
+  @include media-query(medium) {
+    display: block;
+  }
+}
+
+#home-page .floor-plans-slider-for--mobile {
+  display: none;
+
+  @include media-query(small) {
+    display: block;
+  }
+}
+
+#home-page .floor-plans-section .slick-prev:before, .slick-next:before {
+    color: $color-arrows-floor-plans;
+  }
+
+#home-page .floor-plans-div {
+  height: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 75px;
+
+  @include media-query(small) {
+    padding: 50px 10%;
+    width: 80%;
+  }
+}
+
+#home-page .floor-plans-slider-for__post {
+  @include flexbox($align: baseline);
+}
+
+#home-page .floor-plans-slider-for__post img {
+  height: 275px;
+  object-fit: contain;
+}

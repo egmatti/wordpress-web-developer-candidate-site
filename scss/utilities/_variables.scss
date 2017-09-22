@@ -11,23 +11,28 @@ $mustard: #e9a92f;
 $midnight: #292937;
 
 // Color Functions
+$color-body: $white;
+
 $color-headline: $white;
 $color-body-text: $black;
 $color-selection: lighten($mustard, 30%);
 
-$color-header: $white;
 $color-nav-item: $black;
 $color-nav-item-hover: $mustard;
+
+$color-arrows-floor-plans: $mustard;
+
+$color-header: $white;
 
 
 // FONTS
 
 // Font Stacks
-$font-stack-primary: 'Montserrat', sans-serif;
-$font-stack-secondary: 'Lato', sans-serif;
+$font-stack-primary: 'Lato', sans-serif;
+$font-stack-secondary: 'Montserrat', sans-serif;
 
 // Font Weights
-$font-weight-thin: 100;
+$font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 

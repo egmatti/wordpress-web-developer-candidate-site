@@ -23,7 +23,8 @@
   }
 
   @include e(item) {
-    @extend h4;
+    @extend h5;
+    font-family: $font-stack-secondary;
     color: $color-nav-item;
     display: inline-block;
     list-style-type: none;
