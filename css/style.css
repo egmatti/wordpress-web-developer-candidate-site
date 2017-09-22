@@ -1,35 +1,17 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Avenir Next";
-  src: url("fonts/avenir_next.eot");
-  /* IE9 Compat Modes */
-  src: url("fonts/avenir_next.eot?#iefix") format("embedded-opentype"), url("fonts/avenir_next.woff2") format("woff2"), url("fonts/avenir_next.woff") format("woff"), url("fonts/avenir_next.ttf") format("truetype"), url("fonts/avenir_next.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
-@font-face {
-  font-family: "Emily Mattison";
-  src: url("fonts/Emily_Mattison.eot");
-  /* IE9 Compat Modes */
-  src: url("fonts/Emily_Mattison.eot?#iefix") format("embedded-opentype"), url("fonts/Emily_Mattison.woff2") format("woff2"), url("fonts/Emily_Mattison.woff") format("woff"), url("fonts/Emily_Mattison.ttf") format("truetype"), url("fonts/Emily_Mattison.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
-@font-face {
-  font-family: "Milkshake";
-  src: url("fonts/Milkshake.eot");
-  /* IE9 Compat Modes */
-  src: url("fonts/Milkshake.eot?#iefix") format("embedded-opentype"), url("fonts/Milkshake.woff2") format("woff2"), url("fonts/Milkshake.woff") format("woff"), url("fonts/Milkshake.ttf") format("truetype"), url("fonts/Milkshake.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
 * {
-  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0; }
   * ::selection {
-    background: rgba(31, 212, 249, 0.25); }
+    background: #f8e2b9; }
 
 a {
   outline: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #0b0b0b;
+  color: #fff;
   letter-spacing: 0.15rem;
   text-transform: uppercase; }
 
@@ -58,8 +40,7 @@ h5 {
 
 p {
   color: #0b0b0b;
-  line-height: 2rem;
-  margin-top: 25px; }
+  line-height: 2rem; }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
