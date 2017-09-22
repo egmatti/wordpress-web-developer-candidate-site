@@ -1,0 +1,9 @@
+// ==========================================
+// HERO
+// ==========================================
+
+.hero {
+  @include bg-image($bg-image: "hero-image");
+  height: calc(100vh - 87.5px); // Full view height minus height of header
+  width: 100%;
+}

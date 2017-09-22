@@ -1,0 +1,78 @@
+// ==========================================
+// NAV
+// ==========================================
+
+.nav-container {
+  @include flexbox($direction: row, $justify: space-between);
+  // background: $midnight;
+  height: 100%;
+  margin: 0 2.5%;
+  width: 95%;
+}
+
+.nav {
+  @include flexbox($direction: row, $justify: space-between);
+  height: auto;
+  width: auto;
+
+  @include m(left) {
+    @extend .nav;
+  }
+
+  @include m(right) {
+    @extend .nav;
+  }
+
+  @include e(item) {
+    @extend h4;
+    color: $color-nav-item;
+    display: inline-block;
+    list-style-type: none;
+    padding: $padding-nav-item;
+
+    @include m(first) {
+      @extend .nav__item;
+      @include flexbox($direction: row, $justify: space-between);
+      padding-left: 0px;
+    }
+
+    @include m(last) {
+      @extend .nav__item;
+      padding-right: 0px;
+    }
+  }
+}
+
+.hamburger-menu-container {
+  @include flexbox($direction: column);
+  border: 1.25px solid $black;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.hamburger-menu__row {
+  border-bottom: 1.25px solid $black;
+  height: 8px;
+
+  @include m(top) {
+    @extend .hamburger-menu__row;
+    margin-top: -8px;
+    width: 50%;
+  }
+
+  @include m(middle) {
+    @extend .hamburger-menu__row;
+    width: 66%;
+  }
+
+  @include m(bottom) {
+    @extend .hamburger-menu__row;
+    width: 50%;
+  }
+}
+
+.logo {
+  height: 43.75px;
+  object-fit: contain;
+}

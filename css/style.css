@@ -10,16 +10,10 @@
 a {
   outline: none; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, .nav__item, .nav__item--first, .nav__item--last, h5, h6 {
   color: #fff;
-  letter-spacing: 0.15rem;
+  font-weight: 300;
   text-transform: uppercase; }
-
-h1, h2 {
-  font-weight: 700; }
-
-h3, h4, h5 {
-  font-weight: 600; }
 
 h1 {
   font-size: 2rem; }
@@ -30,13 +24,11 @@ h2 {
 h3 {
   font-size: 1.5rem; }
 
-h4 {
-  font-size: 1.25rem;
-  letter-spacing: 0.1rem; }
+h4, .nav__item, .nav__item--first, .nav__item--last {
+  font-size: 1.25rem; }
 
 h5 {
-  font-size: 1rem;
-  letter-spacing: 0.1rem; }
+  font-size: 1rem; }
 
 p {
   color: #0b0b0b;
@@ -680,5 +672,73 @@ template {
 .slick-dots li.slick-active button:before {
   opacity: .75;
   color: black; }
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  margin: 0 2.5%;
+  width: 95%; }
+
+.nav, .nav--left, .nav--right {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: auto;
+  width: auto; }
+  .nav__item, .nav__item--first, .nav__item--last {
+    color: #0b0b0b;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 20px; }
+    .nav__item--first {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      padding-left: 0px; }
+    .nav__item--last {
+      padding-right: 0px; }
+
+.hamburger-menu-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1.25px solid #0b0b0b;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px; }
+
+.hamburger-menu__row, .hamburger-menu__row--top, .hamburger-menu__row--middle, .hamburger-menu__row--bottom {
+  border-bottom: 1.25px solid #0b0b0b;
+  height: 8px; }
+  .hamburger-menu__row--top {
+    margin-top: -8px;
+    width: 50%; }
+  .hamburger-menu__row--middle {
+    width: 66%; }
+  .hamburger-menu__row--bottom {
+    width: 50%; }
+
+.logo {
+  height: 43.75px;
+  object-fit: contain; }
+
+header {
+  background: #fff;
+  height: 87.5px;
+  width: 100%; }
+
+.hero {
+  background: url("../images/hero-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 87.5px);
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

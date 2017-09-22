@@ -13,8 +13,11 @@ $midnight: #292937;
 // Color Functions
 $color-headline: $white;
 $color-body-text: $black;
-
 $color-selection: lighten($mustard, 30%);
+
+$color-header: $white;
+$color-nav-item: $black;
+
 
 // FONTS
 
@@ -23,19 +26,14 @@ $font-stack-primary: 'Montserrat', sans-serif;
 $font-stack-secondary: 'Lato', sans-serif;
 
 // Font Weights
-$font-weight-thin: 100;
 $font-weight-light: 300;
 $font-weight-regular: 400;
-$font-weight-medium: 600;
 $font-weight-bold: 700;
-$font-weight-extra-bold: 900;
 
 // Font Sizes
 $base-font-size: 16px;
 
 // Letter Spacing
-$letter-spacing-headline: 0.15rem;
-$letter-spacing-headline-small: 0.1rem;
 
 // Line Height
 $line-height-body-text: 2rem;
@@ -47,6 +45,7 @@ $border-size: 1.5px;
 
 
 // MARGINS AND PADDING
+$padding-nav-item: 0 20px;
 
 
 // HEIGHTS AND WIDTHS
