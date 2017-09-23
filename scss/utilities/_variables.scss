@@ -7,6 +7,7 @@
 // Color Descriptions
 $white: #fff;
 $black: #0b0b0b;
+$gray: lighten($black, 75%);
 $mustard: #e9a92f;
 $midnight: #292937;
 
@@ -20,9 +21,12 @@ $color-selection: lighten($mustard, 30%);
 $color-nav-item: $black;
 $color-nav-item-hover: $mustard;
 
-$color-arrows-floor-plans: $mustard;
+$color-arrows-floor-plans: $black;
+$color-dots-floor-plans: $mustard;
 
 $color-header: $white;
+
+$color-floor-plans-post-details: $midnight;
 
 
 // FONTS
@@ -50,6 +54,7 @@ $line-height-body-text: 2rem;
 $border-size: 1.25px;
 
 $border-black: 1.25px solid $black;
+$border-gray: 1.25px solid $gray;
 $border-mustard: 1.25px solid $mustard;
 
 

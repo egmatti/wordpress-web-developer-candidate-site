@@ -2,10 +2,12 @@
 // HOME PAGE
 // ==========================================
 
+// FLOOR PLANS SECTION
+
 #home-page .floor-plans-section {
   background: $color-body;
   height: auto;
-  margin: 100px 0;
+  margin: 100px 0 125px 0;
   width: 100%;
 
   @include e(description) {
@@ -20,7 +22,7 @@
   }
 }
 
-#home-page .floor-plans-slider-for--desktop {
+#home-page .floor-plans-slider--desktop {
   display: block;
 
   @include media-query(small) {
@@ -32,7 +34,7 @@
   }
 }
 
-#home-page .floor-plans-slider-for--tablet {
+#home-page .floor-plans-slider--tablet {
   display: none;
 
   @include media-query(medium) {
@@ -40,7 +42,7 @@
   }
 }
 
-#home-page .floor-plans-slider-for--mobile {
+#home-page .floor-plans-slider--mobile {
   display: none;
 
   @include media-query(small) {
@@ -48,14 +50,43 @@
   }
 }
 
-#home-page .floor-plans-section .slick-prev:before, .slick-next:before {
+#home-page .floor-plans-section .slick-dots {
+  bottom: -50px;
+}
+
+#home-page .floor-plans-section .slick-dots li button {
+  margin: 0;
+  padding: 0;
+}
+
+#home-page .floor-plans-section .slick-dots li button:before {
+  border: 2px solid $mustard;
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: $color-body;
+  height: 12.5px;
+  opacity: 1;
+  width: 12.5px;
+}
+
+#home-page .floor-plans-section .slick-dots li.slick-active button:before {
+    background: $color-dots-floor-plans;
+    color: $color-dots-floor-plans;
+}
+
+#home-page .floor-plans-section .slick-prev, #home-page .floor-plans-section .slick-next {
+    top: 45%;
+}
+
+#home-page .floor-plans-section .slick-prev:before, #home-page .floor-plans-section .slick-next:before {
     color: $color-arrows-floor-plans;
-  }
+    font-size: 3.5rem;
+}
 
 #home-page .floor-plans-div {
   height: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
   padding-top: 75px;
 
   @include media-query(small) {
@@ -64,11 +95,66 @@
   }
 }
 
-#home-page .floor-plans-slider-for__post {
-  @include flexbox($align: baseline);
+#home-page .floor-plans-post {
+  border: $border-gray;
+  height: 300px;
+  margin: 0 20px;
+  position: relative;
 }
 
-#home-page .floor-plans-slider-for__post img {
-  height: 275px;
+#home-page .floor-plans-post__title-container {
+  height: auto;
+  margin: 15px 5% 0 5%;
+  width: 90%;
+}
+
+#home-page .floor-plans-post__title, #home-page .floor-plans-post__subtitle {
+  display: block;
+}
+
+#home-page .floor-plans-post__title {
+  font-size: 1.3rem;
+}
+
+#home-page .floor-plans-post__subtitle {
+  font-size: 0.85rem;
+  padding-top: 7.5px;
+}
+
+#home-page .floor-plans-post__image-container {
+  @include flexbox();
+  // Height is being calculated in home.js
+  width: 100%;
+}
+
+#home-page .floor-plans-post__image {
+  height: auto;
+  margin: 0px 7.5%;
+  max-height: 150px;
   object-fit: contain;
+  width: 85%;
+}
+
+#home-page .floor-plans-post__details-container {
+  background: $color-floor-plans-post-details;
+  bottom: 0;
+  height: 50px;
+  position: absolute;
+  width: 100%;
+}
+
+#home-page .floor-plans-post__dimensions, #home-page .floor-plans-post__price {
+  @include vertical-align();
+  color: $white;
+  text-transform: uppercase;
+}
+
+#home-page .floor-plans-post__dimensions {
+  float: left;
+  margin-left: 5%;
+}
+
+#home-page .floor-plans-post__price {
+  float: right;
+  margin-right: 5%;
 }
