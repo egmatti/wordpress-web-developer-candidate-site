@@ -7,7 +7,7 @@
 #home-page .floor-plans-section {
   background: $color-body;
   height: auto;
-  margin: 100px 0 125px 0;
+  margin: 100px 0 150px 0;
   width: 100%;
 
   @include e(description) {
@@ -64,9 +64,9 @@
   border-radius: 100%;
   box-sizing: border-box;
   color: $color-body;
-  height: 12.5px;
+  height: 15px;
   opacity: 1;
-  width: 12.5px;
+  width: 15px;
 }
 
 #home-page .floor-plans-section .slick-dots li.slick-active button:before {
@@ -100,6 +100,10 @@
   height: 300px;
   margin: 0 20px;
   position: relative;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 #home-page .floor-plans-post__title-container {
@@ -157,4 +161,41 @@
 #home-page .floor-plans-post__price {
   float: right;
   margin-right: 5%;
+}
+
+
+// CONTACT SECTION
+
+#home-page .contact-section {
+  height: 450px;
+  width: 100%;
+
+  @include e(square) {
+    display: inline-block;
+    float: left;
+    height: 100%;
+
+    @include m(left) {
+      @extend .contact-section__square;
+      background: $color-contact-section-square-left;
+      width: 35%;
+    }
+
+    @include m(middle) {
+      @extend .contact-section__square;
+      @include bg-image($bg-image: "contact-section-image");
+      width: 30%;
+    }
+
+    @include m(right) {
+      @extend .contact-section__square;
+      background: $color-contact-section-square-right;
+      width: 35%;
+    }
+  }
+}
+
+#home-page .contact-section .headline-container {
+  margin: 0 17.5%;
+  width: 65%;
 }

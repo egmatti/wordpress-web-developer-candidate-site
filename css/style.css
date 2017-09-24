@@ -818,7 +818,7 @@ header {
 #home-page .floor-plans-section {
   background: #fff;
   height: auto;
-  margin: 100px 0 125px 0;
+  margin: 100px 0 150px 0;
   width: 100%; }
   #home-page .floor-plans-section__description {
     margin: 0 20%;
@@ -861,9 +861,9 @@ header {
   border-radius: 100%;
   box-sizing: border-box;
   color: #fff;
-  height: 12.5px;
+  height: 15px;
   opacity: 1;
-  width: 12.5px; }
+  width: 15px; }
 
 #home-page .floor-plans-section .slick-dots li.slick-active button:before {
   background: #e9a92f;
@@ -891,6 +891,8 @@ header {
   height: 300px;
   margin: 0 20px;
   position: relative; }
+  #home-page .floor-plans-post:focus {
+    outline: none; }
 
 #home-page .floor-plans-post__title-container {
   height: auto;
@@ -943,5 +945,29 @@ header {
 #home-page .floor-plans-post__price {
   float: right;
   margin-right: 5%; }
+
+#home-page .contact-section {
+  height: 450px;
+  width: 100%; }
+  #home-page .contact-section__square, #home-page .contact-section__square--left, #home-page .contact-section__square--middle, #home-page .contact-section__square--right {
+    display: inline-block;
+    float: left;
+    height: 100%; }
+    #home-page .contact-section__square--left {
+      background: #292937;
+      width: 35%; }
+    #home-page .contact-section__square--middle {
+      background: url("../images/contact-section-image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 30%; }
+    #home-page .contact-section__square--right {
+      background: #e9a92f;
+      width: 35%; }
+
+#home-page .contact-section .headline-container {
+  margin: 0 17.5%;
+  width: 65%; }
 
 /*# sourceMappingURL=style.css.map */
