@@ -730,9 +730,9 @@ p {
     .nav--right {
       display: none; } }
   .nav__item, .nav__item--first, .nav__item--last {
-    font-family: "Montserrat", sans-serif;
     color: #0b0b0b;
     display: inline-block;
+    font-family: "Montserrat", sans-serif;
     list-style-type: none;
     padding: 0 20px; }
     .nav__item:hover, .nav__item--first:hover, .nav__item--last:hover {
@@ -796,6 +796,7 @@ p {
 header {
   background: #fff;
   height: 87.5px;
+  max-width: 100vw;
   width: 100%; }
 
 footer {
@@ -804,6 +805,7 @@ footer {
   justify-content: space-between;
   background: #fff;
   height: 57.5px;
+  max-width: 100vw;
   position: relative;
   width: 100%; }
 
@@ -860,10 +862,17 @@ footer .arrow--bottom {
   height: -webkit-calc(100vh - 87.5px);
   height: -moz-calc(100vh - 87.5px);
   height: calc(100vh - 87.5px);
+  max-width: 100vw;
   width: 100%; }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    .hero-section {
+      background: url("../images/hero-image-tablet.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
   @media (min-width: 0px) and (max-width: 767px) {
     .hero-section {
-      background: url("../images/hero-image-mobile-2.png");
+      background: url("../images/hero-image-mobile.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; } }
@@ -905,6 +914,7 @@ footer .arrow--bottom {
   background: #fff;
   height: auto;
   margin: 100px 0 150px 0;
+  max-width: 100vw;
   width: 100%; }
   @media (min-width: 0px) and (max-width: 767px) {
     #home-page .floor-plans-section {
@@ -964,6 +974,9 @@ footer .arrow--bottom {
 #home-page .floor-plans-section .slick-prev:before, #home-page .floor-plans-section .slick-next:before {
   color: #0b0b0b;
   font-size: 3.5rem; }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    #home-page .floor-plans-section .slick-prev:before, #home-page .floor-plans-section .slick-next:before {
+      font-size: 2.75rem; } }
   @media (min-width: 0px) and (max-width: 767px) {
     #home-page .floor-plans-section .slick-prev:before, #home-page .floor-plans-section .slick-next:before {
       font-size: 2.75rem; } }
@@ -1040,7 +1053,11 @@ footer .arrow--bottom {
 
 #home-page .contact-section {
   height: 450px;
+  max-width: 100vw;
   width: 100%; }
+  @media (min-width: 768px) and (max-width: 1025px) {
+    #home-page .contact-section {
+      height: auto; } }
   @media (min-width: 0px) and (max-width: 767px) {
     #home-page .contact-section {
       height: auto; } }
@@ -1048,6 +1065,10 @@ footer .arrow--bottom {
     display: inline-block;
     float: left;
     height: 100%; }
+    @media (min-width: 768px) and (max-width: 1025px) {
+      #home-page .contact-section__square, #home-page .contact-section__square--left, #home-page .contact-section__square--middle, #home-page .contact-section__square--right {
+        display: block;
+        height: 50vh; } }
     @media (min-width: 0px) and (max-width: 767px) {
       #home-page .contact-section__square, #home-page .contact-section__square--left, #home-page .contact-section__square--middle, #home-page .contact-section__square--right {
         display: block;
@@ -1055,6 +1076,9 @@ footer .arrow--bottom {
     #home-page .contact-section__square--left {
       background: #292937;
       width: 35%; }
+      @media (min-width: 768px) and (max-width: 1025px) {
+        #home-page .contact-section__square--left {
+          width: 50%; } }
       @media (min-width: 0px) and (max-width: 767px) {
         #home-page .contact-section__square--left {
           width: 100%; } }
@@ -1064,12 +1088,18 @@ footer .arrow--bottom {
       background-size: cover;
       background-position: center;
       width: 30%; }
+      @media (min-width: 768px) and (max-width: 1025px) {
+        #home-page .contact-section__square--middle {
+          width: 50%; } }
       @media (min-width: 0px) and (max-width: 767px) {
         #home-page .contact-section__square--middle {
           width: 100%; } }
     #home-page .contact-section__square--right {
       background: #e9a92f;
       width: 35%; }
+      @media (min-width: 768px) and (max-width: 1025px) {
+        #home-page .contact-section__square--right {
+          width: 100%; } }
       @media (min-width: 0px) and (max-width: 767px) {
         #home-page .contact-section__square--right {
           width: 100%; } }

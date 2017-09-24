@@ -32,9 +32,9 @@
 
   @include e(item) {
     @extend h5;
-    font-family: $font-stack-secondary;
     color: $color-nav-item;
     display: inline-block;
+    font-family: $font-stack-secondary;
     list-style-type: none;
     padding: $padding-nav-item;
 

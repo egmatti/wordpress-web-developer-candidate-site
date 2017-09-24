@@ -6,6 +6,7 @@ footer {
   @include flexbox($justify: space-between);
   background: $color-footer;
   height: 57.5px;
+  max-width: 100vw;
   position: relative;
   width: 100%;
 }
