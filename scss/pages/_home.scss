@@ -215,7 +215,7 @@
   font-family: $font-stack-primary;
   height: 45px;
   margin: 7.5px 0;
-  padding-left: 7.5px;
+  padding: 0 7.5px;
   text-transform: uppercase;
 
   &:focus {
@@ -241,6 +241,10 @@
   &:-moz-placeholder { /* Firefox 18- */
     color: $color-contact-form-input;
   }
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+ }
 }
 
 #home-page .contact-form #first-name, #home-page .contact-form #last-name {
@@ -261,9 +265,22 @@
   width: 100%;
 }
 
+#home-page .contact-form #source {
+  background-image: url("../images/arrow-form.svg");
+  background-position: 97.5% 50%;
+  background-repeat: no-repeat;
+  background-size: 15px 25px;
+}
+
 #home-page .contact-form #submit {
   background: $color-contact-form-input;
   color: $color-body-text;
   font-family: $font-stack-primary;
   text-transform: uppercase;
+
+  &:hover {
+    background: $color-contact-form-input-hover;
+    border: $border-midnight;
+    color: $color-contact-form-input;
+  }
 }

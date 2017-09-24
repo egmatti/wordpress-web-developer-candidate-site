@@ -58,12 +58,12 @@ footer .arrow {
   @include m(top) {
     @extend .arrow;
     bottom: 25px;
-    right: -10px;
+    right: -12.5px;
   }
 
   @include m(bottom) {
     @extend .arrow;
     bottom: 7.5px;
-    right: -10px;
+    right: -12.5px;
   }
 }
