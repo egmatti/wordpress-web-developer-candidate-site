@@ -21,6 +21,10 @@ footer {
   margin-right:   -moz-calc(1.25% + 83px);
   margin-right:     calc(1.25% + 83px);
 
+  @include media-query(small) {
+    display: none;
+  }
+
   span {
     font-size: 0.85rem;
     font-weight: $font-weight-bold;

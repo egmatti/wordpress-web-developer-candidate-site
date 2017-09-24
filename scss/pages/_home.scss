@@ -10,6 +10,10 @@
   margin: 100px 0 150px 0;
   width: 100%;
 
+  @include media-query(small) {
+    margin: 50px 0;
+  }
+
   @include e(description) {
     margin: 0 20%;
     text-align: center;
@@ -81,6 +85,10 @@
 #home-page .floor-plans-section .slick-prev:before, #home-page .floor-plans-section .slick-next:before {
     color: $color-arrows-floor-plans;
     font-size: 3.5rem;
+
+    @include media-query(small) {
+      font-size: 2.75rem;
+    }
 }
 
 #home-page .floor-plans-div {
@@ -170,27 +178,48 @@
   height: 450px;
   width: 100%;
 
+  @include media-query(small) {
+    height: auto;
+  }
+
   @include e(square) {
     display: inline-block;
     float: left;
     height: 100%;
 
+    @include media-query(small) {
+      display: block;
+      height: 50vh;
+    }
+
     @include m(left) {
       @extend .contact-section__square;
       background: $color-contact-section-square-left;
       width: 35%;
+
+      @include media-query(small) {
+        width: 100%;
+      }
     }
 
     @include m(middle) {
       @extend .contact-section__square;
       @include bg-image($bg-image: "contact-section-image");
       width: 30%;
+
+      @include media-query(small) {
+        width: 100%;
+      }
     }
 
     @include m(right) {
       @extend .contact-section__square;
       background: $color-contact-section-square-right;
       width: 35%;
+
+      @include media-query(small) {
+        width: 100%;
+      }
     }
   }
 }
@@ -249,6 +278,10 @@
 
 #home-page .contact-form #first-name, #home-page .contact-form #last-name {
   width: 48%;
+
+  @include media-query(small) {
+    width: 47.5%;
+  }
 }
 
 #home-page .contact-section #first-name {

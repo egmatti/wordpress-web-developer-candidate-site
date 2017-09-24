@@ -8,6 +8,10 @@
   height:   -moz-calc(100vh - 87.5px);
   height:     calc(100vh - 87.5px); // Full view height minus height of header
   width: 100%;
+
+  @include media-query(small) {
+    @include bg-image($bg-image: "hero-image-mobile-2");
+  }
 }
 
 .hero-section .headline-container {
@@ -39,11 +43,19 @@
     @extend .arrow;
     bottom: 35px;
     right: 17.5px;
+
+    @include media-query(small) {
+      right: 7.5px;
+    }
   }
 
   @include m(bottom) {
     @extend .arrow;
     bottom: 17.5px;
     right: 17.5px;
+
+    @include media-query(small) {
+      right: 7.5px;
+    }
   }
 }

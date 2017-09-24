@@ -20,6 +20,14 @@
 
   @include m(right) {
     @extend .nav;
+
+    @include media-query (medium) {
+      display: none;
+    }
+
+    @include media-query (small) {
+      display: none;
+    }
   }
 
   @include e(item) {
@@ -32,6 +40,14 @@
 
     &:hover {
       color: $color-nav-item-hover;
+    }
+
+    @include media-query(medium) {
+      display: none;
+    }
+
+    @include media-query(small) {
+      display: none;
     }
 
     @include m(first) {
@@ -50,6 +66,14 @@
         @include m(top) {
           margin-top: -8px;
         }
+      }
+
+      @include media-query(medium) {
+        display: flex;
+      }
+
+      @include media-query(small) {
+        display: flex;
       }
     }
 
