@@ -4,7 +4,9 @@
 
 .hero-section {
   @include bg-image($bg-image: "hero-image");
-  height: calc(100vh - 87.5px); // Full view height minus height of header
+  height: -webkit-calc(100vh - 87.5px);
+  height:   -moz-calc(100vh - 87.5px);
+  height:     calc(100vh - 87.5px); // Full view height minus height of header
   width: 100%;
 }
 
@@ -25,7 +27,7 @@
 }
 
 .hero-section .arrows-container:hover .arrow--top {
-  bottom: 37px;
+  bottom: 33px;
 }
 
 .hero-section .arrows-container:hover .arrow--bottom {
