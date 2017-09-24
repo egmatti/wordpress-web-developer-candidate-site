@@ -2,7 +2,7 @@
 // HOME PAGE
 // ==========================================
 
-// SCROLL ON ARROW CLICK
+// SMOOTHING SCROLL ON ARROW CLICK
 
 function scrollToAnchor(menuname){
     var link = $("[name='"+ menuname +"']");
@@ -14,7 +14,7 @@ $(".hero-section .arrows-container").click(function() {
 });
 
 $("footer .arrows-container").click(function() {
-   scrollToAnchor('header');
+   scrollToAnchor('hero-section');
 });
 
 
