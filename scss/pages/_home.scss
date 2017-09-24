@@ -7,12 +7,12 @@
 #home-page .floor-plans-section {
   background: $color-body;
   height: auto;
-  margin: 100px 0 150px 0;
   max-width: 100vw;
+  padding: 100px 0 150px 0;
   width: 100%;
 
   @include media-query(small) {
-    margin: 50px 0;
+    padding: 50px 0;
   }
 
   @include e(description) {

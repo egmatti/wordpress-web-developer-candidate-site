@@ -2,6 +2,22 @@
 // HOME PAGE
 // ==========================================
 
+// SCROLL ON ARROW CLICK
+
+function scrollToAnchor(menuname){
+    var link = $("[name='"+ menuname +"']");
+    $('html,body').animate({scrollTop: link.offset().top},'slow');
+}
+
+$(".hero-section .arrows-container").click(function() {
+   scrollToAnchor('floor-plans-section');
+});
+
+$("footer .arrows-container").click(function() {
+   scrollToAnchor('header');
+});
+
+
 // FLOOR PLANS SLIDER
 
 $(".floor-plans-slider--desktop").slick({

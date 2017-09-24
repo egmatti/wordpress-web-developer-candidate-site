@@ -913,12 +913,12 @@ footer .arrow--bottom {
 #home-page .floor-plans-section {
   background: #fff;
   height: auto;
-  margin: 100px 0 150px 0;
   max-width: 100vw;
+  padding: 100px 0 150px 0;
   width: 100%; }
   @media (min-width: 0px) and (max-width: 767px) {
     #home-page .floor-plans-section {
-      margin: 50px 0; } }
+      padding: 50px 0; } }
   #home-page .floor-plans-section__description {
     margin: 0 20%;
     text-align: center;
