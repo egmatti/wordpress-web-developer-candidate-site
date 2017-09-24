@@ -30,6 +30,7 @@ $color-floor-plans-post-details: $midnight;
 
 $color-contact-section-square-left: $midnight;
 $color-contact-section-square-right: $mustard;
+$color-contact-form-input: $white;
 
 
 // FONTS
@@ -54,11 +55,12 @@ $line-height-body-text: 2rem;
 
 // BORDERS
 
-$border-size: 1.25px;
+$border-size: 1.5px;
 
-$border-black: 1.25px solid $black;
-$border-gray: 1.25px solid $gray;
-$border-mustard: 1.25px solid $mustard;
+$border-white: 1.5px solid $white;
+$border-black: 1.5px solid $black;
+$border-gray: 1.5px solid $gray;
+$border-mustard: 1.5px solid $mustard;
 
 
 // MARGINS AND PADDING

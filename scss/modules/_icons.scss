@@ -4,17 +4,17 @@
 
 .hamburger-menu-container {
   @include flexbox($direction: column);
-  border: $border-black;
+  border: 1.25px solid $black;
   height: 40px;
   margin-right: 10px;
   width: 40px;
 
   &:hover {
-    border: $border-mustard;
+    border: 1.25px solid $mustard;
   }
 
   &:hover > .hamburger-menu__row {
-    border-bottom: $border-mustard;
+    border-bottom: 1.25px solid $mustard;
     height: 8px;
 
     @include m(top) {
@@ -24,7 +24,7 @@
 }
 
 .hamburger-menu__row {
-  border-bottom: $border-black;
+  border-bottom: 1.25px solid $black;
   height: 6px;
 
   @include m(top) {

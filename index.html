@@ -327,6 +327,20 @@ HOME PAGE
       <div class="contact-section__square--middle">
       </div>
       <div class="contact-section__square--right">
+        <form class="contact-form">
+          <input id="first-name" placeholder="First Name" type="text" required></input>
+          <input id="last-name" placeholder="Last Name" type="text" required></input>
+          <input id="email" placeholder="Email" type="text" required></input>
+          <input id="source" placeholder="How did you hear about us?" list="source-options" required>
+            <datalist id="source-options">
+              <option value="Advertisement">
+              <option value="Internet search">
+              <option value="Referral">
+              <option value="Social Media">
+            </datalist>
+          </input>
+          <input id="submit" type="submit" value="Submit">
+        </form>
       </div>
     </section>
 

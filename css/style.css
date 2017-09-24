@@ -763,11 +763,11 @@ p {
   position: absolute;
   width: 20%; }
   .headline-container__border--top {
-    border-top: 1.25px solid #e9a92f;
+    border-top: 1.5px solid #e9a92f;
     left: 0;
     top: 0; }
   .headline-container__border--bottom {
-    border-bottom: 1.25px solid #e9a92f;
+    border-bottom: 1.5px solid #e9a92f;
     bottom: 0;
     right: 0; }
 
@@ -857,7 +857,7 @@ header {
   padding: 0; }
 
 #home-page .floor-plans-section .slick-dots li button:before {
-  border: 2px solid #e9a92f;
+  border: 1.5px solid #e9a92f;
   border-radius: 100%;
   box-sizing: border-box;
   color: #fff;
@@ -887,7 +887,7 @@ header {
       width: 80%; } }
 
 #home-page .floor-plans-post {
-  border: 1.25px solid #cacaca;
+  border: 1.5px solid #cacaca;
   height: 300px;
   margin: 0 20px;
   position: relative; }
@@ -925,7 +925,7 @@ header {
 #home-page .floor-plans-post__details-container {
   background: #292937;
   bottom: 0;
-  height: 50px;
+  height: 45px;
   position: absolute;
   width: 100%; }
 
@@ -967,7 +967,64 @@ header {
       width: 35%; }
 
 #home-page .contact-section .headline-container {
-  margin: 0 17.5%;
-  width: 65%; }
+  margin: 0 10%;
+  width: 80%; }
+
+#home-page .contact-form {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: auto;
+  margin: 0 10%;
+  width: 80%; }
+
+#home-page .contact-form input {
+  background: #e9a92f;
+  border: 1.5px solid #fff;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  height: 45px;
+  margin: 7.5px 0;
+  padding-left: 7.5px;
+  text-transform: uppercase; }
+  #home-page .contact-form input:focus {
+    outline: none; }
+  #home-page .contact-form input::placeholder {
+    color: #fff; }
+  #home-page .contact-form input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #fff; }
+  #home-page .contact-form input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff; }
+  #home-page .contact-form input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff; }
+  #home-page .contact-form input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff; }
+
+#home-page .contact-form #first-name, #home-page .contact-form #last-name {
+  width: 48%; }
+
+#home-page .contact-section #first-name {
+  float: left;
+  margin-right: 7.5px; }
+
+#home-page .contact-section #last-name {
+  float: right;
+  margin-left: 7.5px; }
+
+#home-page .contact-form #email, #home-page .contact-form #source, #home-page .contact-form #submit {
+  width: 100%; }
+
+#home-page .contact-form #submit {
+  background: #fff;
+  color: #0b0b0b;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */
