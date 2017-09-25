@@ -2,63 +2,13 @@
 HOME PAGE
 ========================================== -->
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordPress Web Developer Candidate Site</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i|Montserrat:300,300i,400,400i,700,700i" rel="stylesheet">
-    <script src="https://use.fontawesome.com/ab03b8820e.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+<?php
+/*
+  Template Name: Home Page
+*/
+?>
 
-
-<!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-  </head>
-  <body id="home-page">
-
-
-<!-- HEADER -->
-
-    <header>
-      <div class="nav-container">
-        <ul class="nav--left">
-          <a><li class="nav__item--first">
-            <div class="hamburger-menu-container">
-              <div class="hamburger-menu__row--top"></div>
-              <div class="hamburger-menu__row--middle"></div>
-              <div class="hamburger-menu__row--bottom"></div>
-            </div>
-            Menu
-          </li></a>
-          <a><li class="nav__item">Call 888.555.5555</li></a>
-        </ul>
-
-        <img class="logo" src="images/logo.png" alt="Logo"/>
-
-        <ul class="nav--right">
-          <a><li class="nav__item">Residents</li></a>
-          <a><li class="nav__item--last">Apply Now</li></a>
-        </ul>
-      </div>
-    </header>
+<?php get_header(); ?>
 
 
 <!-- HERO SECTION -->
@@ -71,8 +21,8 @@ HOME PAGE
       </div>
       <div class="triangle">
         <div class="arrows-container">
-          <img class="arrow--top" src="images/arrow-mustard.svg" alt="Arrow"/>
-          <img class="arrow--bottom" src="images/arrow-mustard.svg" alt="Arrow"/>
+          <img class="arrow--top" src="<?php bloginfo('stylesheet_directory'); ?>/images/arrow-mustard.svg" alt="Arrow"/>
+          <img class="arrow--bottom" src="<?php bloginfo('stylesheet_directory'); ?>/images/arrow-mustard.svg" alt="Arrow"/>
         </div>
       </div>
     </section>
@@ -94,7 +44,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -107,7 +57,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -120,7 +70,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/B1.png" alt="B1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,096 sq ft</span>
@@ -133,7 +83,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/C3.png" alt="C3 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,235 sq ft</span>
@@ -146,7 +96,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -159,7 +109,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -175,7 +125,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -188,7 +138,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -201,7 +151,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/B1.png" alt="B1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,096 sq ft</span>
@@ -214,7 +164,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/C3.png" alt="C3 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,235 sq ft</span>
@@ -227,7 +177,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -240,7 +190,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -256,7 +206,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -269,7 +219,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -282,7 +232,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/B1.png" alt="B1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,096 sq ft</span>
@@ -295,7 +245,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/C3.png" alt="C3 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">1,235 sq ft</span>
@@ -308,7 +258,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">650 sq ft</span>
@@ -321,7 +271,7 @@ HOME PAGE
               <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="images/floor-plans/A1.png" alt="A1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
               <span class="floor-plans-post__dimensions">850 sq ft</span>
@@ -365,25 +315,4 @@ HOME PAGE
     </section>
 
 
-<!-- FOOTER -->
-
-    <footer>
-      <span class="copyright">Copyright &copy; 2017 Developer Test</span>
-      <span class="credits">Powered by <span>Razz Interactive</span></span>
-      <div class="pentagon">
-        <div class="arrows-container">
-          <img class="arrow--top" src="images/arrow-white.svg" alt="Arrow"/>
-          <img class="arrow--bottom" src="images/arrow-white.svg" alt="Arrow"/>
-        </div>
-      </div>
-    </footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/velocity.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="js/slick.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
-  </body>
-</html>
+<?php get_footer(); ?>

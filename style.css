@@ -860,7 +860,7 @@ footer .arrow--bottom {
   right: -12.5px; }
 
 .hero-section {
-  background: url("../images/hero-image.png");
+  background: url("../wordpress-web-developer-candidate-site/images/hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -869,13 +869,13 @@ footer .arrow--bottom {
   width: 100%; }
   @media (min-width: 768px) and (max-width: 1025px) {
     .hero-section {
-      background: url("../images/hero-image-tablet.png");
+      background: url("../wordpress-web-developer-candidate-site/images/hero-image-tablet.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; } }
   @media (min-width: 0px) and (max-width: 767px) {
     .hero-section {
-      background: url("../images/hero-image-mobile.png");
+      background: url("../wordpress-web-developer-candidate-site/images/hero-image-mobile.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; } }
@@ -1089,7 +1089,7 @@ footer .arrow--bottom {
         #home-page .contact-section__square--left {
           width: 100%; } }
     #home-page .contact-section__square--middle {
-      background: url("../images/contact-section-image.png");
+      background: url("../wordpress-web-developer-candidate-site/images/contact-section-image.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
