@@ -13,10 +13,18 @@ HOME PAGE
 
 <!-- HERO SECTION -->
 
-    <section class="hero-section" name="hero-section">
+    <section class="hero-section" <?php if ( get_field('hero_image') ) { echo 'style="background-image: url(' . get_field('hero_image') . ')"'; } ?> name="hero-section">
       <div class="headline-container">
         <div class="headline-container__border--top"></div>
-        <h1 class="headline">Lorem ipsum<br/>dolor sit ament</h1>
+        <h1 class="headline">
+          <?php
+            if ( get_field('hero_text') ) {
+              echo get_field('hero_text');
+            } else {
+              echo 'Lorem ipsum<br/>dolor sit ament';
+            }
+          ?>
+        </h1>
         <div class="headline-container__border--bottom"></div>
       </div>
       <div class="triangle">
@@ -32,8 +40,24 @@ HOME PAGE
 
     <section class="floor-plans-section" name="floor-plans-section">
       <div class="floor-plans-section__description">
-        <h2>Floor Plans</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        <h2>
+          <?php
+            if ( get_field('floor_plans_section_title') ) {
+              echo get_field('floor_plans_section_title');
+            } else {
+              echo 'Floor Plans';
+            }
+          ?>
+        </h2>
+        <p>
+          <?php
+            if ( get_field('floor_plans_section_text') ) {
+              echo get_field('floor_plans_section_text');
+            } else {
+              echo 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.';
+            }
+          ?>
+        </p>
       </div>
 
       <div class=floor-plans-div>
@@ -170,11 +194,19 @@ HOME PAGE
       <div class="contact-section__square--left">
         <div class="headline-container">
           <div class="headline-container__border--top"></div>
-          <h2 class="headline">Choose your lifestyle. Find your new home.</h2>
+          <h2 class="headline">
+            <?php
+              if ( get_field('contact_section_text') ) {
+                echo get_field('contact_section_text');
+              } else {
+                echo 'Choose your lifestyle. Find your new home.';
+              }
+            ?>
+          </h2>
           <div class="headline-container__border--bottom"></div>
         </div>
       </div>
-      <div class="contact-section__square--middle">
+      <div <?php if ( get_field('contact_section_image') ) { echo 'style="background-image: url(' . get_field('contact_section_image') . ')"'; } ?> class="contact-section__square--middle">
       </div>
       <div class="contact-section__square--right">
         <form class="contact-form">
