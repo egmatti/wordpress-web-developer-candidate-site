@@ -38,246 +38,126 @@ HOME PAGE
 
       <div class=floor-plans-div>
         <div class="floor-plans-slider--desktop">
+
+          <?php
+
+            $args = array(
+              'post_type' => 'floor_plans',
+              'posts_per_page' => '12'
+            );
+
+            $floor_plans_desktop_query = new WP_Query($args);
+
+          ?>
+
+          <?php if ( $floor_plans_desktop_query->have_posts() ) : while ( $floor_plans_desktop_query->have_posts() ) : $floor_plans_desktop_query->the_post(); ?>
+
           <div class="floor-plans-post">
             <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
+              <span class="floor-plans-post__title"><?php the_field('model_name'); ?></span>
+              <span class="floor-plans-post__subtitle"><?php the_field('bedrooms'); ?> Bedroom / <?php the_field('bathrooms'); ?> Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_field('model_name'); ?> floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
+              <span class="floor-plans-post__dimensions"><?php
+                  $squareFootage = get_field('square_footage');
+                  $squareFootageComma = number_format($squareFootage);
+                  echo $squareFootageComma;
+                ?> sq ft</span>
+              <span class="floor-plans-post__price">$<?php
+                  $price = get_field('price');
+                  $priceComma = number_format($price);
+                  echo $priceComma;
+                ?></span>
             </div>
           </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">B1</span>
-              <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,096 sq ft</span>
-              <span class="floor-plans-post__price">$2,000</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">C3</span>
-              <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,235 sq ft</span>
-              <span class="floor-plans-post__price">$2,400</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
+
+          <?php endwhile; endif; wp_reset_postdata(); ?>
+
         </div>
 
         <div class="floor-plans-slider--tablet">
+
+          <?php
+
+            $args = array(
+              'post_type' => 'floor_plans',
+              'posts_per_page' => '12'
+            );
+
+            $floor_plans_tablet_query = new WP_Query($args);
+
+          ?>
+
+          <?php if ( $floor_plans_tablet_query->have_posts() ) : while ( $floor_plans_tablet_query->have_posts() ) : $floor_plans_tablet_query->the_post(); ?>
+
           <div class="floor-plans-post">
             <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
+              <span class="floor-plans-post__title"><?php the_field('model_name'); ?></span>
+              <span class="floor-plans-post__subtitle"><?php the_field('bedrooms'); ?> Bedroom / <?php the_field('bathrooms'); ?> Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_field('model_name'); ?> floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
+              <span class="floor-plans-post__dimensions"><?php
+                  $squareFootage = get_field('square_footage');
+                  $squareFootageComma = number_format($squareFootage);
+                  echo $squareFootageComma;
+                ?> sq ft</span>
+              <span class="floor-plans-post__price">$<?php
+                  $price = get_field('price');
+                  $priceComma = number_format($price);
+                  echo $priceComma;
+                ?></span>
             </div>
           </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">B1</span>
-              <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,096 sq ft</span>
-              <span class="floor-plans-post__price">$2,000</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">C3</span>
-              <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,235 sq ft</span>
-              <span class="floor-plans-post__price">$2,400</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
+
+          <?php endwhile; endif; wp_reset_postdata(); ?>
+
         </div>
 
         <div class="floor-plans-slider--mobile">
+
+          <?php
+
+            $args = array(
+              'post_type' => 'floor_plans',
+              'posts_per_page' => '12'
+            );
+
+            $floor_plans_mobile_query = new WP_Query($args);
+
+          ?>
+
+          <?php if ( $floor_plans_mobile_query->have_posts() ) : while ( $floor_plans_mobile_query->have_posts() ) : $floor_plans_mobile_query->the_post(); ?>
+
           <div class="floor-plans-post">
             <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
+              <span class="floor-plans-post__title"><?php the_field('model_name'); ?></span>
+              <span class="floor-plans-post__subtitle"><?php the_field('bedrooms'); ?> Bedroom / <?php the_field('bathrooms'); ?> Bathroom</span>
             </div>
             <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
+              <img class="floor-plans-post__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_field('model_name'); ?> floor plan"/>
             </div>
             <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
+              <span class="floor-plans-post__dimensions"><?php
+                  $squareFootage = get_field('square_footage');
+                  $squareFootageComma = number_format($squareFootage);
+                  echo $squareFootageComma;
+                ?> sq ft</span>
+              <span class="floor-plans-post__price">$<?php
+                  $price = get_field('price');
+                  $priceComma = number_format($price);
+                  echo $priceComma;
+                ?></span>
             </div>
           </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">B1</span>
-              <span class="floor-plans-post__subtitle">2 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/B1.png" alt="B1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,096 sq ft</span>
-              <span class="floor-plans-post__price">$2,000</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">C3</span>
-              <span class="floor-plans-post__subtitle">3 Bedroom / 2 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/C3.png" alt="C3 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">1,235 sq ft</span>
-              <span class="floor-plans-post__price">$2,400</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">S1</span>
-              <span class="floor-plans-post__subtitle">Studio / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/S1.png" alt="S1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">650 sq ft</span>
-              <span class="floor-plans-post__price">$1,500</span>
-            </div>
-          </div>
-          <div class="floor-plans-post">
-            <div class="floor-plans-post__title-container">
-              <span class="floor-plans-post__title">A1</span>
-              <span class="floor-plans-post__subtitle">1 Bedroom / 1 Bathroom</span>
-            </div>
-            <div class="floor-plans-post__image-container">
-              <img class="floor-plans-post__image" src="<?php bloginfo('stylesheet_directory'); ?>/images/floor-plans/A1.png" alt="A1 floor plan"/>
-            </div>
-            <div class="floor-plans-post__details-container">
-              <span class="floor-plans-post__dimensions">850 sq ft</span>
-              <span class="floor-plans-post__price">$1,800</span>
-            </div>
-          </div>
+
+          <?php endwhile; endif; wp_reset_postdata(); ?>
+
         </div>
       </div>
 
